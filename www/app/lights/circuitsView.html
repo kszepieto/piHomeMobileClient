@@ -1,0 +1,12 @@
+<ion-view cache-view="false" view-title="Circuits">
+  <ion-content>
+    <ion-refresher on-refresh="refresh()" pulling-text="Pull to refresh">
+    </ion-refresher>
+    <ion-list type="list-inset">
+      <ion-item ng-repeat="circuit in CircuitStates" class="item-icon-right" ng-click="changeCircuitState(circuit)">
+        <span>{{circuit.Name}}</span>
+        <span class="icon" ng-class="{'ion-ios-lightbulb': circuit.State, 'ion-ios-lightbulb-outline': !circuit.State}"></span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

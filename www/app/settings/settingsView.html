@@ -1,0 +1,23 @@
+<ion-view cache-view="false" view-title="Settings">
+  <ion-content>
+    <ion-list type="list-inset">
+      <ion-item class="item-divider">Default tab</ion-item>
+      <ion-radio ng-model="settings.favoriteTab" value="circuits">Circuits</ion-radio>
+      <ion-radio ng-model="settings.favoriteTab" value="predefinedSets">Predefined sets</ion-radio>
+    </ion-list>
+
+    <ion-list type="list-inset">
+      <ion-item class="item-divider">Server address</ion-item>
+      <label class="item">
+        <input type="text" ng-model="settings.serverAddress" style="font-size: 150%; font-weight: bold"
+               placeholder="Server IP address">
+      </label>
+    </ion-list>
+
+    <ion-list type="list-inset">
+      <button class="button button-block button-large button-positive" ng-click="save()">Save</button>
+      <button class="button button-block button-large button-stable button-outline" ng-click="cancel()">Cancel</button>
+    </ion-list>
+  </ion-content>
+
+</ion-view>
