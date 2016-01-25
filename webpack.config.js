@@ -10,7 +10,6 @@ module.exports = {
   context: path.resolve('js'),
   entry: {
     about: './about_page.js',
-    home: './home_page.js',
   },
   output: {
     path: path.resolve('build/js/'),
@@ -21,18 +20,9 @@ module.exports = {
   plugins: [
     commonsPlugin
   ],
-  devServer: {
-    contentBase: 'public'
-  },
 
   module: {
-    loaders: [
-      {
-        test: /\.es6$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
-      }
-    ]
+
   },
 
   resolve: {
